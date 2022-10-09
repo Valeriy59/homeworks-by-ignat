@@ -1,4 +1,4 @@
-import React, { ChangeEvent, KeyboardEvent, useState } from 'react'
+import React, { ChangeEvent, useState , KeyboardEvent} from 'react'
 import Greeting from './Greeting'
 import { UserType } from './HW3'
 
@@ -13,16 +13,19 @@ export const pureAddUser = (name: string, setError: (error:string) => void, setN
         setError('name is empty')
     } else {
         addUserCallback(name)
-        alert(`Hello ${name}!`) // need to fix
         setError('')
         setName('')
     }
 }
 
-export const pureOnBlur = (name: string, setError: (error:string) => void) => { // если имя пустое - показать ошибку
+export const pureOnBlur = (name: string, setError: (error:string) => void) => {
+    // если имя пустое - показать ошибку
+    if (name === '') {setError('name is empty')}
 }
 
-export const pureOnEnter = (e: any, addUser: any) => { // если нажата кнопка Enter - добавить
+export const pureOnEnter = (e: KeyboardEvent<HTMLInputElement>, addUser: () => void) => {
+    // если нажата кнопка Enter - добавить
+    if (e.key==='Enter') {addUser()}
 }
 
 // более простой и понятный для новичков
@@ -50,12 +53,12 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
         pureOnBlur(name, setError)
     }
 
-    const onEnter = (e: any) => {
+    const onEnter = (e: KeyboardEvent<HTMLInputElement>) => {
         pureOnEnter(e, addUser)
     }
 
     const totalUsers = users.length // need to fix
-    const lastUserName = users[users.length-1].name // need to fix
+    const lastUserName = users.length ? users[users.length-1].name : '' // need to fix
 
     return (
         <Greeting
