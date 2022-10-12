@@ -42,11 +42,11 @@ const Stand = () => {
 
             <div className={s.buttons}>
                 {/*обычная кнопка:*/}
-                <div>
-                    <SuperButton id={'hw4-super-button-default'}>
-                        default
-                    </SuperButton>
-                </div>
+                {/*<div>*/}
+                {/*    <SuperButton id={'hw4-super-button-default'} >*/}
+                {/*        default*/}
+                {/*    </SuperButton>*/}
+                {/*</div>*/}
                 {/*красная кнопка:*/}
                 <div>
                     <SuperButton id={'hw4-super-button-red'} xType={'red'}>
@@ -54,24 +54,25 @@ const Stand = () => {
                     </SuperButton>
                 </div>
                 {/*задизэйбленная кнопка:*/}
-                <div>
-                    <SuperButton
-                        id={'hw4-super-button-disabled'}
-                        xType={'red'}
-                        disabled
-                    >
-                        disabled
-                    </SuperButton>
-                </div>
-                {/*задизэйбленная кнопка:*/}
-                <div>
-                    <SuperButton
-                        id={'hw4-super-button-secondary'}
-                        xType={'secondary'}
-                    >
-                        secondary
-                    </SuperButton>
-                </div>
+            {/*    <div>*/}
+            {/*        <SuperButton*/}
+            {/*            id={'hw4-super-button-disabled'}*/}
+            {/*            xType={'red'}*/}
+            {/*            disabled*/}
+            {/*            */}
+            {/*        >*/}
+            {/*            disabled*/}
+            {/*        </SuperButton>*/}
+            {/*    </div>*/}
+            {/*    /!*задизэйбленная кнопка:*!/*/}
+            {/*    <div>*/}
+            {/*        <SuperButton*/}
+            {/*            id={'hw4-super-button-secondary'}*/}
+            {/*            xType={'secondary'}*/}
+            {/*        >*/}
+            {/*            secondary*/}
+            {/*        </SuperButton>*/}
+            {/*    </div>*/}
             </div>
 
             <div className={s.checkboxes}>
