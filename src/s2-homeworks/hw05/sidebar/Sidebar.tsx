@@ -8,6 +8,7 @@ type PropsType = {
     open: boolean
     handleClose: () => void
 }
+//в файле Sidebar.tsx дописать className так чтоб вешался класс s.active когда мы уже на соответствующей странице
 
 export const Sidebar: FC<PropsType> = ({open, handleClose}) => {
     const sidebarClass = s.sidebar
@@ -31,7 +32,7 @@ export const Sidebar: FC<PropsType> = ({open, handleClose}) => {
                         id={'hw5-pre-junior-link'}
                         to={PATH.PRE_JUNIOR}
                         onClick={handleClose}
-                        // className={...} // делает студент
+                        className={s.active} // делает студент
                     >
                         Pre-junior
                     </NavLink>
