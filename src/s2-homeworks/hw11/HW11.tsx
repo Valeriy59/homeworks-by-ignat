@@ -25,20 +25,20 @@ function HW11() {
         }
 
         if (Array.isArray(value)) {
-            if (value[1] - value[0] < minDistance) {
-                if (activeThumb === 0) {
-                    const clamped = Math.min(value[0], 100 - minDistance);
-                    setValue1(clamped)
-                    setValue2(clamped + minDistance);
-                } else {
-                    const clamped = Math.max(value[1], minDistance);
-                    setValue1(clamped - minDistance)
-                    setValue2(clamped);
-                }
-            } else {
+            // if (value[1] - value[0] < minDistance) {
+            //     if (activeThumb === 0) {
+            //         const clamped = Math.min(value[0], 100 - minDistance);
+            //         setValue1(clamped)
+            //         setValue2(clamped + minDistance);
+            //     } else {
+            //         const clamped = Math.max(value[1], minDistance);
+            //         setValue1(clamped - minDistance)
+            //         setValue2(clamped);
+            //     }
+            // } else {
                 setValue1(value[0])
                 setValue2(value[1])
-            }
+            // }
         }
     }
 
